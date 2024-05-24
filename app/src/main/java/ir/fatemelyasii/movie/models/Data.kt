@@ -1,4 +1,4 @@
-package com.mkrdeveloper.movieinfoappmvvm.models
+package ir.fatemelyasii.movie.models
 
 data class Data(
     val country: String,

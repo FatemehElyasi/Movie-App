@@ -11,10 +11,10 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "Banner screen") {
         composable("Banner screen") {
-            //BannerScreen(navController = navController)
+            BannerScreen(navController = navController)
         }
         composable("Home screen") {
-            // HomeScreen(navController = navController)
+             HomeScreen(navController = navController)
         }
 
     }

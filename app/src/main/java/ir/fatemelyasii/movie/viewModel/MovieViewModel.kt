@@ -6,7 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mkrdeveloper.movieinfoappmvvm.models.Data
+import ir.fatemelyasii.movie.models.Data
 import ir.fatemelyasii.movie.repository.Repository
 import kotlinx.coroutines.launch
 
@@ -34,5 +34,5 @@ data class ScreenState(
     val movies: List<Data> = emptyList(),
     val page: Int = 1,
 
-)
+    )
 

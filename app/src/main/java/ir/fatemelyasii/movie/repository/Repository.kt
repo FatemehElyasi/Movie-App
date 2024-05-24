@@ -1,6 +1,6 @@
 package ir.fatemelyasii.movie.repository
 
-import com.mkrdeveloper.movieinfoappmvvm.models.MoviesList
+import ir.fatemelyasii.movie.models.MoviesList
 import ir.fatemelyasii.movie.Utils.RetrofitInstance
 import retrofit2.Response
 
