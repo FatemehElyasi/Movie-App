@@ -55,7 +55,7 @@ fun HomeScreen(navController: NavHostController) {
     val movieViewModel = viewModel<MovieViewModel>()
     val state = movieViewModel.state
     Scaffold(
-        modifier = Modifier.background(Color.Transparent),
+        modifier = Modifier.background(Color.White),
         topBar = {
             TopBar()
         }, content = { paddingValues ->
@@ -172,7 +172,7 @@ fun TopBar() {
     TopAppBar(
         title = { Text(text = "Movie App") },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color.White.copy(.4f)
+            containerColor = Color.Black.copy(.4f)
         )
     )
 }
