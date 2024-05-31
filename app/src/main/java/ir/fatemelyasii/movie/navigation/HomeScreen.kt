@@ -1,9 +1,11 @@
 package ir.fatemelyasii.movie.navigation
 
+import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,8 +23,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.ProgressIndicatorDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -35,6 +39,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -64,13 +69,11 @@ fun HomeScreen(navController: NavHostController) {
                     ),
                 content = {
                     items(state.movies.size) {
-                        //--------------------------------------------------------
 
-
-                        //if (it >= state.movies.size - 1 && !state.endReached && !state.isLoading)
-                        //{
-                            //movieViewModel.loadNextItems()
-                        //}
+                        if (it >= state.movies.size - 1 && !state.endReached && !state.isLoading)
+                        {
+                            movieViewModel.loadNextItems()
+                        }
 
                         //-------------------------------------------------------
                         ItemUi(
@@ -79,7 +82,7 @@ fun HomeScreen(navController: NavHostController) {
                         )
                     }
                        //-------------------------------------------------------
-                    /* item(state.isLoading)
+                     item(state.isLoading)
                      {
                          Row(
                              Modifier
@@ -92,7 +95,7 @@ fun HomeScreen(navController: NavHostController) {
                          if (!state.error.isNullOrEmpty()){
                              Toast.makeText(LocalContext.current, state.error, Toast.LENGTH_SHORT).show()
                          }
-                     }*/
+                     }
                     //-------------------------------------------------------
 
                 }
